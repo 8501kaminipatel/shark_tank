@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container styling */
+div {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    text-align: center;
+    
+}
+
+/* Heading styles */
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+}
+
+/* Span styles */
+span {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Image styling */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+/* Button styling */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    
+     <div>
+       
+        <img src="" id="image">
+        <h4>title: <span id="title"></span></h4>
+        <h4>founder: <span id="founder"></span></h4>
+        <h4>category: <span id="category"></span></h4>
+        <h4>price: <span id="price"></span></h4>
+        <button>Add to cart</button>
+    </div>
+    <script>
+
+     const parm = new URLSearchParams(window.location.search)
+
+     let title = parm.get("title")
+     document.getElementById('title').innerText = title;
+
+     let image = parm.get("image")
+     document.getElementById('image').src = image;
+
+
+     let founder = parm.get("founder")
+     document.getElementById('founder').innerText = founder;
+
+     let category = parm.get("category")
+     document.getElementById('category').innerText = category;
+
+
+     let price = parm.get("price")
+     document.getElementById('price').innerText = price;
+
+    </script>
+
+
+    
+</body>
+</html>
